@@ -15,6 +15,8 @@ function setup(){
     }
 
     ground = Bodies.rectangle(200,390,200,20,ground_options);
+
+    platform =Bodies.rectangle(200,200,100,100);
     World.add(world,ground);
 
     var ball_options ={
@@ -32,6 +34,8 @@ function draw(){
     Engine.update(engine);
     rectMode(CENTER);
     rect(ground.position.x,ground.position.y,400,20);
+
+    rect(platform.position.x,platform.position.y,400,20);
 
     ellipseMode(RADIUS);
     ellipse(ball.position.x, ball.position.y, 20, 20);
